@@ -1,0 +1,13 @@
+/client_exepnses/
+GET /product
+POST /category
+POST /product
+PUT /product
+
+  /customer
+  /sales
+   /salesdelivery
+    
+
+
+
