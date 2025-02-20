@@ -17,9 +17,9 @@ DB_CONFIG = {
 
 # Constants
 NUM_DEPARTMENTS = 50
-NUM_EMPLOYEES = 500000  # Large number for 10GB+
+NUM_EMPLOYEES = 50000000  # Large number for 10GB+
 YEARS_OF_SALARY = 5  # 5 years of salary data
-THREADS = 8  # Number of parallel threads
+THREADS = 100  # Number of parallel threads
 
 fake = Faker()
 
@@ -120,7 +120,7 @@ def insert_salaries():
         list(tqdm(executor.map(insert_salary_data, emp_chunks), total=len(emp_chunks), desc="Inserting Salaries"))
 
 if __name__ == "__main__":
-    #insert_departments()
-    #insert_employees()
+    insert_departments()
+    insert_employees()
     insert_salaries()
     print("Data Insertion Complete!")
